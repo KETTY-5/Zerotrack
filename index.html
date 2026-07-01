@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZEROTRACK - Cyber Intelligence Platform</title>
+    <meta name="description" content="Platform analisis digital untuk investigasi penipuan online dengan teknologi canggih." />
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ===== LOADING SCREEN ===== -->
+<div id="loading">
+    <div class="loader-container">
+        <div class="loader-ring"></div>
+        <div class="loader-text">INITIALIZING ZEROTRACK</div>
+        <div class="loader-bar"><span></span></div>
+        <div class="loader-sub">[SECURE CONNECTION ESTABLISHED]</div>
+    </div>
+</div>
+
+<!-- ===== MATRIX BACKGROUND ===== -->
+<canvas id="matrixCanvas"></canvas>
+
+<!-- ===== SCAN LINE ===== -->
+<div class="scan-line"></div>
+
+<!-- ===== GLOW ORB ===== -->
+<div class="glow-orb glow-orb-1"></div>
+<div class="glow-orb glow-orb-2"></div>
+
+<!-- ===== HEADER ===== -->
+<header class="header" id="header">
+    <div class="container">
+        <div class="logo">
+            <span class="logo-bracket">[</span>
+            ZERO<span>TRACK</span>
+            <span class="logo-bracket">]</span>
+            <span class="logo-tagline">v.3.2.1</span>
+        </div>
+        <nav class="nav" id="nav">
+            <a href="#about">#About</a>
+            <a href="#services">#Services</a>
+            <a href="#pricing">#Pricing</a>
+            <a href="#testimonials">#Testimonials</a>
+            <a href="#faq">#FAQ</a>
+            <a href="#contact" class="nav-cta">Contact</a>
+        </nav>
+        <button class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="container">
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1200">
+            <div class="hero-badge">
+                <span class="blink-dot"></span> 
+                SYSTEM ONLINE · SECURE CONNECTION
+            </div>
+            
+            <div class="hero-terminal" data-aos="fade-up" data-aos-delay="200">
+                <span class="terminal-prompt">root@zerotrack:~$</span>
+                <span class="terminal-command" id="typingText">./deploy --platform=intelligence</span>
+                <span class="terminal-cursor"></span>
+            </div>
+            
+            <h1 data-aos="fade-up" data-aos-delay="300">
+                <span class="highlight-gradient">Digital</span> Intelligence<br>
+                <span class="highlight-cyber">Platform</span>
+            </h1>
+            
+            <p data-aos="fade-up" data-aos-delay="400">
+                Platform analisis digital canggih untuk investigasi penipuan online. 
+                <span class="highlight-text">Akurat · Terstruktur · Profesional</span>
+            </p>
+            
+            <div class="hero-stats" data-aos="fade-up" data-aos-delay="500">
+                <div class="hero-stat">
+                    <span class="stat-number" data-count="1000">0</span>
+                    <span class="stat-label">+ Konsultasi</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="stat-number" data-count="500">0</span>
+                    <span class="stat-label">+ Laporan</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="stat-number" data-count="99">0</span>
+                    <span class="stat-label">% Satisfaction</span>
+                </div>
+            </div>
+            
+            <div class="hero-buttons" data-aos="fade-up" data-aos-delay="600">
+                <a href="#pricing" class="btn-primary btn-glow">
+                    <i class="fas fa-rocket"></i> Mulai Sekarang
+                </a>
+                <a href="#about" class="btn-outline">
+                    <i class="fas fa-info-circle"></i> Pelajari
+                </a>
+            </div>
+        </div>
+        
+        <div class="hero-visual" data-aos="fade-left" data-aos-duration="1000">
+            <div class="hud-container">
+                <div class="hud-ring"></div>
+                <div class="hud-ring-2"></div>
+                <div class="hud-center">
+                    <i class="fas fa-shield-halved"></i>
+                </div>
+                <div class="hud-line hud-line-1"></div>
+                <div class="hud-line hud-line-2"></div>
+                <div class="hud-line hud-line-3"></div>
+                <div class="hud-line hud-line-4"></div>
+                <div class="hud-dot hud-dot-1"></div>
+                <div class="hud-dot hud-dot-2"></div>
+                <div class="hud-dot hud-dot-3"></div>
+                <div class="hud-dot hud-dot-4"></div>
+                <div class="hud-text hud-text-1">SECURE</div>
+                <div class="hud-text hud-text-2">ANALYZING</div>
+                <div class="hud-text hud-text-3">TRACKING</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="scroll-indicator">
+        <span>SCROLL</span>
+        <i class="fas fa-chevron-down"></i>
+    </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="about" id="about">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-badge">// ABOUT</span>
+            <h2 class="section-title">
+                Mengenal <span class="highlight-cyber">ZEROTRACK</span>
+            </h2>
+            <p class="section-subtitle">
+                Platform digital intelligence untuk investigasi profesional.
+            </p>
+        </div>
+        
+        <div class="about-grid">
+            <div class="about-content" data-aos="fade-right">
+                <div class="about-card glass">
+                    <div class="about-icon">
+                        <i class="fas fa-shield-halved"></i>
+                    </div>
+                    <h3>Cyber Intelligence Platform</h3>
+                    <p>
+                        ZeroTrack adalah platform <span class="highlight-text">digital intelligence</span> 
+                        yang membantu proses data untuk investigasi kasus penipuan online secara profesional. 
+                        Dengan teknologi terkini dan pendekatan berbasis data, kami memberikan solusi analisis 
+                        yang akurat dan terpercaya.
+                    </p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i> Analisis Device Information
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i> Location Tracking
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i> Rekonstruksi Wajah
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i> Laporan Terstruktur
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="about-stats" data-aos="fade-left">
+                <div class="about-stat-card glass">
+                    <div class="about-stat-icon"><i class="fas fa-users"></i></div>
+                    <div class="about-stat-number">1000+</div>
+                    <div class="about-stat-label">Konsultasi</div>
+                </div>
+                <div class="about-stat-card glass">
+                    <div class="about-stat-icon"><i class="fas fa-file-alt"></i></div>
+                    <div class="about-stat-number">500+</div>
+                    <div class="about-stat-label">Laporan</div>
+                </div>
+                <div class="about-stat-card glass">
+                    <div class="about-stat-icon"><i class="fas fa-star"></i></div>
+                    <div class="about-stat-number">99%</div>
+                    <div class="about-stat-label">Kepuasan Klien</div>
+                </div>
+                <div class="about-stat-card glass">
+                    <div class="about-stat-icon"><i class="fas fa-clock"></i></div>
+                    <div class="about-stat-number">24/7</div>
+                    <div class="about-stat-label">Support</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="services" id="services">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-badge">// SERVICES</span>
+            <h2 class="section-title">
+                Layanan <span class="highlight-cyber">Premium</span>
+            </h2>
+            <p class="section-subtitle">
+                Teknologi canggih untuk investigasi digital yang akurat.
+            </p>
+        </div>
+        
+        <div class="services-grid">
+            <div class="service-card" data-aos="flip-up" data-aos-delay="0">
+                <div class="service-icon">
+                    <i class="fas fa-device"></i>
+                    <div class="service-icon-glow"></div>
+                </div>
+                <h4>Device Information</h4>
+                <p>Analisis mendalam terhadap perangkat pelaku untuk melacak jejak digital.</p>
+                <div class="service-tag">ANALYZE</div>
+            </div>
+            
+            <div class="service-card" data-aos="flip-up" data-aos-delay="100">
+                <div class="service-icon">
+                    <i class="fas fa-location-dot"></i>
+                    <div class="service-icon-glow"></div>
+                </div>
+                <h4>Location Analysis</h4>
+                <p>Pelacakan lokasi berbasis IP dan data geospasial untuk identifikasi area.</p>
+                <div class="service-tag">TRACK</div>
+            </div>
+            
+            <div class="service-card" data-aos="flip-up" data-aos-delay="200">
+                <div class="service-icon">
+                    <i class="fas fa-user-tie"></i>
+                    <div class="service-icon-glow"></div>
+                </div>
+                <h4>Wajah Pelaku</h4>
+                <p>Rekonstruksi dan analisis wajah dari berbagai sumber data digital.</p>
+                <div class="service-tag">IDENTIFY</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== PRICING ===== -->
+<section class="pricing" id="pricing">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-badge">// PRICING</span>
+            <h2 class="section-title">
+                Pilih <span class="highlight-cyber">Paket</span> Anda
+            </h2>
+            <p class="section-subtitle">
+                Solusi investigasi digital dengan harga terjangkau.
+            </p>
+        </div>
+        
+        <div class="pricing-grid">
+            <!-- Paket Basic -->
+            <div class="pricing-card" data-aos="fade-up" data-aos-delay="0">
+                <div class="pricing-header">
+                    <span class="pricing-plan">BASIC</span>
+                    <div class="pricing-price">
+                        <span class="price-amount">Rp250</span>
+                        <span class="price-period">/ laporan</span>
+                    </div>
+                </div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> Device Information</li>
+                    <li><i class="fas fa-check"></i> Laporan Sederhana</li>
+                    <li><i class="fas fa-check"></i> Konsultasi 1x</li>
+                    <li class="disabled"><i class="fas fa-times"></i> Location Analysis</li>
+                    <li class="disabled"><i class="fas fa-times"></i> Wajah Pelaku</li>
+                    <li class="disabled"><i class="fas fa-times"></i> Support 24/7</li>
+                </ul>
+                <a href="#" class="btn-primary btn-pricing">Pilih Paket</a>
+            </div>
+            
+            <!-- Paket Premium (Favorit) -->
+            <div class="pricing-card pricing-popular" data-aos="fade-up" data-aos-delay="100">
+                <div class="pricing-badge">POPULAR</div>
+                <div class="pricing-header">
+                    <span class="pricing-plan">PREMIUM</span>
+                    <div class="pricing-price">
+                        <span class="price-old">Rp600.000</span>
+                        <span class="price-amount">Rp300</span>
+                        <span class="price-period">/ laporan</span>
+                    </div>
+                    <div class="pricing-discount">HEMAT 50%</div>
+                </div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> Device Information</li>
+                    <li><i class="fas fa-check"></i> Location Analysis</li>
+                    <li><i class="fas fa-check"></i> Wajah Pelaku</li>
+                    <li><i class="fas fa-check"></i> Laporan Terstruktur</li>
+                    <li><i class="fas fa-check"></i> Konsultasi Unlimited</li>
+                    <li><i class="fas fa-check"></i> Support 24/7</li>
+                    <li><i class="fas fa-check"></i> Dashboard Real-time</li>
+                </ul>
+                <a href="#" class="btn-primary btn-pricing btn-glow">Pesan Sekarang</a>
+            </div>
+            
+            <!-- Paket Enterprise -->
+            <div class="pricing-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="pricing-header">
+                    <span class="pricing-plan">ENTERPRISE</span>
+                    <div class="pricing-price">
+                        <span class="price-amount">Custom</span>
+                        <span class="price-period">/ per project</span>
+                    </div>
+                </div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> Semua Fitur Premium</li>
+                    <li><i class="fas fa-check"></i> Tim Khusus</li>
+                    <li><i class="fas fa-check"></i> Analisis Mendalam</li>
+                    <li><i class="fas fa-check"></i> Laporan Forensik</li>
+                    <li><i class="fas fa-check"></i> Prioritas Support</li>
+                    <li><i class="fas fa-check"></i> Konsultasi Dedicasi</li>
+                </ul>
+                <a href="#" class="btn-primary btn-pricing">Hubungi Kami</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section class="how-it-works">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-badge">// PROCESS</span>
+            <h2 class="section-title">
+                Cara <span class="highlight-cyber">Kerja</span>
+            </h2>
+            <p class="section-subtitle">
+                Langkah profesional dalam setiap investigasi.
+            </p>
+        </div>
+        
+        <div class="timeline">
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="0">
+                <div class="timeline-number">01</div>
+                <div class="timeline-content">
+                    <h4>Konsultasi</h4>
+                    <p>Diskusi awal untuk memahami kasus Anda</p>
+                </div>
+            </div>
+            <div class="timeline-line"></div>
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="timeline-number">02</div>
+                <div class="timeline-content">
+                    <h4>Pengumpulan Bukti</h4>
+                    <p>Klien menyediakan data dan bukti digital</p>
+                </div>
+            </div>
+            <div class="timeline-line"></div>
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="timeline-number">03</div>
+                <div class="timeline-content">
+                    <h4>Analisis</h4>
+                    <p>Tim ahli menganalisis data secara mendalam</p>
+                </div>
+            </div>
+            <div class="timeline-line"></div>
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="timeline-number">04</div>
+                <div class="timeline-content">
+                    <h4>Penyusunan Laporan</h4>
+                    <p>Hasil analisis disusun dalam laporan profesional</p>
+                </div>
+            </div>
+            <div class="timeline-line"></div>
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+                <div class="timeline-number">05</div>
+                <div class="timeline-content">
+                    <h4>Hasil Dikirim</h4>
+                    <p>Laporan final dikirimkan kepada klien</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="testimonials" id="testimonials">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-badge">// TESTIMONIALS</span>
+            <h2 class="section-title">
+                Apa Kata <span class="highlight-cyber">Klien</span>
+            </h2>
+            <p class="section-subtitle">
+                Pengalaman nyata dari mereka yang telah menggunakan layanan kami.
+            </p>
+        </div>
+        
+        <div class="testimonials-grid">
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+                <div class="testimonial-header">
+                    <img src="https://ui-avatars.com/api/?name=Andi+Saputra&background=00FF66&color=0A0A0A&size=60" alt="Andi" class="testimonial-avatar" />
+                    <div class="testimonial-info">
+                        <h4>Andi Saputra</h4>
+                        <span class="testimonial-location"><i class="fas fa-map-pin"></i> Jakarta, Indonesia</span>
+                    </div>
+                </div>
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                    "ZeroTrack membantu saya mengungkap pelaku penipuan online. Analisis mereka sangat akurat dan profesional. Hasilnya bisa digunakan untuk proses hukum."
+                </p>
+                <div class="testimonial-detail">
+                    <span><i class="fas fa-tag"></i> Kasus Penipuan Online</span>
+                </div>
+            </div>
+            
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="testimonial-header">
+                    <img src="https://ui-avatars.com/api/?name=Siti+Rahma&background=00FF66&color=0A0A0A&size=60" alt="Siti" class="testimonial-avatar" />
+                    <div class="testimonial-info">
+                        <h4>Siti Rahma</h4>
+                        <span class="testimonial-location"><i class="fas fa-map-pin"></i> Bandung
