@@ -2,7 +2,7 @@
 // ZEROTRACK - Cyber Intelligence Platform
 // Premium Hacker Theme JavaScript
 // ============================================
-
+console.log("SCRIPT BERHASIL DIMUAT");
 // Initialize AOS
 AOS.init({
     duration: 800,
